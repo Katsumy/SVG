@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>
+            Container
+        </title>
+    </head>
+    <body>
+        <h1>Elementos Containers</h1>
+        <br>
+        <h2>Defs</h2>
+        <br>
+        <svg>
+            <!--Defs não renderiza o que ele tem, somente quando você chama, e ele pode ser usado várias vezes.-->
+            <defs>
+                <circle id="meu_circulo" r="25" cx="50" cy="50"/>
+            </defs>
+            
+            <!--Para chamar o defs se utiliza a tag "<use/>"-->
+            <!--Se utiliza o "xlink:href" para chamar um arquivo, nesse caso a tag defs, para isso tem 
+                que criar um "id" dentro do defs, no caso no "circle"
+            -->
+            <use xlink:href="#meu_circulo"/>
+            <use xlink:href="#meu_circulo" x="80" fill="blue"/>
+        </svg>
+        <br>
+        <h2>Tag g (Group)</h2>
+        <br>
+        <svg>
+            <!--
+                Tag G é para definir algo nos elementos filhos, nesse caso está sendo introduzido
+                uma cor para os elementos "circle"
+            -->
+            <g fill="purple">
+                <circle id="meu_circulo" r="25" cx="50" cy="50"/>
+                <circle id="meu_circulo" r="25" cx="150" cy="50"/>
+            </g>    
+        </svg>
+        <br>
+        <h2>Symbol</h2>
+        <br>
+        <svg>
+            <!--
+                Basicamente igual o defs, diferença é que se coloca o id no "symbol" ao invés do elemento filho e se utiliza uma viewbox independente.
+            -->
+            <symbol id="meu_simbolo" viewbox="0 0 600 300">
+                <circle r="25" cx="50" cy="50"/>
+            </symbol>
+            
+            <!--Para chamar o defs se utiliza a tag "<use/>"-->
+            <!--Se utiliza o "xlink:href" para chamar um arquivo, nesse caso a tag defs, para isso tem 
+                que criar um "id" dentro do defs, no caso no "circle"
+            -->
+            <use xlink:href="#meu_simbolo"/>
+            <use xlink:href="#meu_simbolo" x="80" fill="blue"/>
+        </svg>
+        
+    </body>
+</html>
