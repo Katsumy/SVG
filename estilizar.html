@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Estilizar</title>
+    </head>
+    <body>
+        <h1>Estilizando o SVG com CSS</h1>
+        <br>
+        <h2>Estilo inline</h2>
+        <br>
+        <!--Inline é quando estiliza dentro da tag com o style-->
+        <svg style="width: 300px; height: 300px;" viewbox="0 0 300 300">
+            <circle r="25" cx="250" cy="100" fill="purple" stroke="red" stroke-width="4"/>
+        </svg>
+        <br>
+        <h2>Estilo dentro do SVG</h2>
+        <br>
+        <!--Não precisa chamar o style, coloca direto-->
+        <svg width="300px" height="300px" viewbox="0 0 300 300">
+            <style>
+                circle{
+                    
+                    fill: purple;
+                    stroke: red; 
+                    stroke-width: 4;
+                }
+            </style>
+            <circle r="25" cx="250" cy="100" />
+        </svg>
+        <br>
+        <h2>Estilo fora do SVG</h2>
+        <br>
+        <style>
+            .circulo1{
+                    
+                    fill: purple;
+                    stroke: red; 
+                    stroke-width: 4;
+                }
+        </style>
+        <svg width="300px" height="300px" viewbox="0 0 300 300">
+            <circle class="circulo1" r="25" cx="250" cy="100" />
+        </svg>
+        
+        <br>
+        <h2>Estilo externo</h2>
+        <br>
+        <!--
+            Duas formas de chamar o estilo externo, através da tag "link" ou por XML
+        -->
+        <link href="css/main.css" rel="stylesheet">
+        
+        <svg width="300px" height="300px" viewbox="0 0 300 300">
+            <circle class="circulo2" r="25" cx="250" cy="100" />
+        </svg>
+    </body>
+</html>
