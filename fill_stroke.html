@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>FillandStroke</title>
+    </head>
+    <body>
+        <h1>Fill and Stroke</h1>
+        <!--Estilo-->
+        <style>
+            .circle{
+                stroke: #000;
+                stroke-width: 4;
+            }
+            .circle-1{
+                fill: red;
+                fill-opacity: .3;
+                /*Stroke-dasharray serve para fazer traços em volta do objeto*/
+                stroke-dasharray: 10 15;
+            }
+            .circle-2{
+                fill: gray;
+                fill-opacity: .8;
+            }
+            .circle-3{
+                fill: purple;
+                fill-opacity: .15;
+            }
+        </style>
+        
+        <svg width="500" height="150" viewbox="0 0 500 150">
+            <circle r="55" class="circle circle-1" cx="200" cy="70"/>
+            <circle r="55" class="circle circle-2" cx="250" cy="70"/>
+            <circle r="55" class="circle circle-3" cx="300" cy="70"/>
+        </svg>
+    </body>
+</html>
